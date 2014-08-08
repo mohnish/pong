@@ -1,6 +1,6 @@
 ## Pong
 
-Simple Pong implementation in JavaScript
+Pong implementation in JavaScript
 
 ### Demo
 
