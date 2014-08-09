@@ -15,12 +15,14 @@ Game.prototype.start = function() {
 
 Game.prototype.update = function() {
   this.entities.forEach(function(entity) {
-    entity.update();
+    if (entity.update) entity.update();
   });
 };
 
 Game.prototype.draw = function() {
+  var self = this;
+
   this.entities.forEach(function(entity) {
-    entity.draw();
+    if (entity.draw) entity.draw(self.context);
   });
 };
