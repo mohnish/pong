@@ -8,7 +8,6 @@ Pong implementation in JavaScript
 
 ## License
 
-
 (The MIT License)
 
 Copyright (c) 2014 Mohnish Thallavajhula &lt;i@mohni.sh&gt;
