@@ -6,10 +6,14 @@ Background.prototype.draw = function(context) {
   context.fillRect(0, 0, game.width, game.height);
 };
 
-var game = new Game($('canvas')[0]);
+var canvas = document.querySelector('canvas')
+  , game = new Game(canvas);
 
 game.entities = [
-  new Background()
+  new Background(),
+  new Ball(),
+  new Paddle()
 ];
 
 game.start();
+canvas.focus();

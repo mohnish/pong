@@ -20,4 +20,8 @@ Ball.prototype.draw = function() {
 
 Ball.prototype.update = function() {
   Entity.prototype.update.apply(this, arguments);
+
+  if (this.y > (game.height - this.height) || this.y < 0) {
+    this.yVelocity *= -1;
+  }
 };

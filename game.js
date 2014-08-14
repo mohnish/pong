@@ -1,6 +1,8 @@
 
 function Game(canvas) {
   this.context = canvas.getContext('2d');
+  this.width = parseFloat(getComputedStyle(canvas).width, 10);
+  this.height = parseFloat(getComputedStyle(canvas).height, 10);
   this.entities = [];
 }
 
