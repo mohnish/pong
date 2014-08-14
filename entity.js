@@ -16,6 +16,13 @@ Entity.prototype.update = function() {
 };
 
 Entity.prototype.draw = function(context) {
-  context.fillStyle = '#ffffff';
+  context.fillStyle = '#fff';
   context.fillRect(this.x, this.y, this.width, this.height);
+};
+
+Entity.prototype.intersect = function(other) {
+  return this.y + this.height > other.y &&
+         this.y < other.y + other.height &&
+         this.x + this.width > other.x &&
+         this.x < other.x + other.width;
 };
