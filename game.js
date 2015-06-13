@@ -1,15 +1,15 @@
 
 function Game(canvas) {
   this.context = canvas.getContext('2d');
-  this.width = parseFloat(getComputedStyle(canvas).width, 10);
-  this.height = parseFloat(getComputedStyle(canvas).height, 10);
+  this.width = canvas.width;
+  this.height = canvas.height;
   this.entities = []; // ball, player, bot, background etc.
 }
 
 Game.prototype.start = function() {
-  var self = this
-    , fps = 60 // ms per frame
-    , interval = 1000/fps;
+  var fps = 60;
+  var interval = 1000/fps;
+  var self = this;
 
   setInterval(function() {
     self.update();
@@ -35,6 +35,6 @@ Game.prototype.draw = function() {
   var self = this;
 
   this.entities.forEach(function(entity) {
-    if (entity.draw) entity.draw(self.context);
+    entity.draw(self.context);
   });
 };
