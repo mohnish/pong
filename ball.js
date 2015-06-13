@@ -5,18 +5,17 @@ function Ball() {
   this.width = 20;
   this.height = 20;
 
-  this.x = game.width/2 - this.width;
-  this.y = game.height/2 - this.height;
+  this.x = (game.width/2) - this.width;
+  this.y = (game.height/2) - this.height;
 
   this.yVelocity = 10;
 }
 
-Ball.prototype = Object.create(Entity.prototype);
+Ball.prototype.__proto__ = Entity.prototype;
+
 Ball.prototype.constructor = Ball;
 
-Ball.prototype.draw = function() {
-  Entity.prototype.draw.apply(this, arguments);
-};
+// `draw` method is inherited from Entity
 
 Ball.prototype.update = function() {
   Entity.prototype.update.apply(this, arguments);
