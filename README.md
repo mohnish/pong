@@ -2,7 +2,7 @@
 
 Pong implementation in JavaScript
 
-### Demo
+### Demo [WIP]
 
 [http://mohni.sh/pong](http://mohni.sh/pong)
 
