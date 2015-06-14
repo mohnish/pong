@@ -1,8 +1,8 @@
-## Pong
+# Pong
 
-Pong implementation in JavaScript
+Naïve pong implementation in JavaScript for the browser
 
-### Demo [WIP]
+## Demo [WIP]
 
 [http://mohni.sh/pong](http://mohni.sh/pong)
 
@@ -10,7 +10,7 @@ Pong implementation in JavaScript
 
 (The MIT License)
 
-Copyright (c) 2014 Mohnish Thallavajhula &lt;i@mohni.sh&gt;
+Copyright (c) 2015 Mohnish Thallavajhula &lt;i@mohni.sh&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -30,4 +30,3 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
