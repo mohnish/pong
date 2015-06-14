@@ -20,10 +20,18 @@ Ball.prototype.update = function() {
   if (this.y > (game.height - this.height) || this.y < 0) {
     this.yVelocity *= -1;
   }
+
+  if (this.x > game.width || this.x < 0) {
+    this.reset();
+  }
 };
 
 Ball.prototype.reset = function() {
-  this.yVelocity = this.xVelocity = 5; // randomize this
+  var max = 5;
+  var min = -5;
+
+  this.yVelocity = ((Math.random() * (max - min + 1)) + min);
+  this.xVelocity = (Math.random() > 0.5) ? max : min;
 
   this.x = (game.width/2) - this.width;
   this.y = (game.height/2) - this.height;
