@@ -2,9 +2,9 @@
 
 Naïve pong implementation in JavaScript for the browser
 
-## Demo [WIP]
+## Play
 
-[http://mohni.sh/pong](http://mohni.sh/pong)
+You can play here: [http://mohni.sh/pong](http://mohni.sh/pong)
 
 ## License
 
