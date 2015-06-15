@@ -15,14 +15,32 @@ Ball.prototype.constructor = Ball;
 // `draw` method is inherited from Entity
 
 Ball.prototype.update = function() {
+  var hitter = null;
   Entity.prototype.update.call(this);
 
   if (this.y > (game.height - this.height) || this.y < 0) {
     this.yVelocity *= -1;
   }
 
-  if (this.x > game.width || this.x < 0) {
+  if (this.x > game.width) {
     this.reset();
+  }
+
+  if (this.x < 0) {
+    this.reset();
+  }
+
+  if (this.intersect(game.bot)) {
+    hitter = game.bot;
+  } else if (this.intersect(game.player)) {
+    hitter = game.player;
+  }
+
+  if (hitter) {
+    this.xVelocity *= -1;
+    this.yVelocity *= -1;
+
+    this.yVelocity += (hitter.yVelocity / 4);
   }
 };
 
