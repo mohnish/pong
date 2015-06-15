@@ -15,7 +15,7 @@ Ball.prototype.constructor = Ball;
 // `draw` method is inherited from Entity
 
 Ball.prototype.update = function() {
-  Entity.prototype.update.apply(this, arguments);
+  Entity.prototype.update.call(this);
 
   if (this.y > (game.height - this.height) || this.y < 0) {
     this.yVelocity *= -1;

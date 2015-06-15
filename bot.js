@@ -9,3 +9,16 @@ function Bot() {
 Bot.prototype.__proto__ = Paddle.prototype;
 
 Bot.prototype.constructor = Bot;
+
+Bot.prototype.update = function() {
+  var speed = 5;
+  Paddle.prototype.update.call(this);
+
+  if (this.y > game.ball.y) {
+    this.yVelocity = -speed;
+  } else if (this.y < game.ball.y) {
+    this.yVelocity = speed;
+  }
+
+  this.y = Math.min(Math.max(this.y, 0), (game.height - this.height));
+};

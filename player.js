@@ -12,7 +12,7 @@ Player.prototype.constructor = Player;
 
 Player.prototype.update = function() {
   var speed = 15;
-  Paddle.prototype.update.apply(this, arguments);
+  Paddle.prototype.update.call(this);
 
   if (game.keyPressed.up) {
     this.yVelocity = -speed;
@@ -21,4 +21,6 @@ Player.prototype.update = function() {
   } else {
     this.yVelocity = 0;
   }
+
+  this.y = Math.min(Math.max(this.y, 0), (game.height - this.height));
 };
