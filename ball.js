@@ -23,10 +23,12 @@ Ball.prototype.update = function() {
   }
 
   if (this.x > game.width) {
+    game.player.score++;
     this.reset();
   }
 
   if (this.x < 0) {
+    game.bot.score++;
     this.reset();
   }
 
